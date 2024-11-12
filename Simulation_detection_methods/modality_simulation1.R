@@ -497,6 +497,6 @@ names(distributions_list) <- c("uniform_300", "uniform_30000", "unimodal_normal_
                                "trimodal_trunc_300", "trimodal_trunc_500", "trimodal_trunc_20000",
                                "trimodal_trunc_30000")
 
-saveRDS(distributions_list, "./Analyses/Modality_detection/all_distributions.RData")
+saveRDS(distributions_list, "./Modality_detection/all_distributions.RData")
 
 

@@ -160,16 +160,16 @@ apply_densMM <- function(data_list){
 
 # Density based method with adjusted noise (ANAM) ------------------------------------#
 
-apply_densMM_adj <- function(data_list){
-  densMM_adj_results <- c()
+apply_ANAM <- function(data_list){
+  ANAM_results <- c()
   
   for(i in 1:length(data_list)){
     x <- data_list[[i]]
     
     result <- DensMMdet_adaptive_noise(x)
-    densMM_adj_results[i] <- result$M
+    ANAM_results[i] <- result$M
   }
   
-  return(densMM_adj_results)
+  return(ANAM_results)
 }
 

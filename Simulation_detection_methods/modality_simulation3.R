@@ -1,8 +1,8 @@
 #### Simulation to assess robustness and accuracy of mode detection methods #####
 #  Step 3: apply modality detection methods to simulated distributions         #
 
-source("./Analyses/Modality_detection/Simulation_detection_methods/modality_simulation2.R")
-distributions_list <- readRDS("./Analyses/Modality_detection/Simulation_detection_methods/all_distributions.RData")
+source("./Simulation_detection_methods/modality_simulation2.R")
+distributions_list <- readRDS("./Simulation_detection_methods/all_distributions.RData")
 
 # data frame to save results ---
 results_simulations <- data.frame(
@@ -46,9 +46,9 @@ results_simulations[191:228, 6] <- results_densMM
 results_simulations[191:228, 5] <- ifelse(results_densMM > 1, TRUE, FALSE)
 
 # Density based measure with adjusted noise (ANAM) -----------------
-results_densMM_adj <- apply_densMM_adj(distributions_list)
-results_simulations[229:266, 6] <- results_densMM_adj
-results_simulations[229:266, 5] <- ifelse(results_densMM_adj > 1, TRUE, FALSE)
+results_ANAM <- apply_ANAM(distributions_list)
+results_simulations[229:266, 6] <- results_ANAM
+results_simulations[229:266, 5] <- ifelse(results_ANAM > 1, TRUE, FALSE)
 
 # save results 
 write.csv(results_simulations, "Analyses/Modality_detection/Simulation_detection_methods/results_simulations.csv")

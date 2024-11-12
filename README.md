@@ -18,12 +18,15 @@ Functions for computations used in the main analyses
 
 ### Analyses
 
-Contains subfolder on longitundinal analyses (the panel data regression model) and on cross-sectional analyses which includes fitting data to the Cusp model, measures of spread and dispersion and on modality detection (both code for the simulation study and applying our method to the datasets). 
+Contains subfolder on longitundinal analyses (the panel data regression model) and on cross-sectional analyses which includes fitting data to the Cusp model, measures of spread and dispersion and on modality detection (applying our method to the datasets). 
 
 Additioanlly, the subfolder `Appendix_Analyses` contains robustness checks for the LISS panel, code for confirmatory factor analyses of all scales, and an investigation into the heterogenity of results when analyzing the EVS/WVS data per country. 
 
 The `Additional_checks` subfolder contains exploratory checks reported in the main manuscript, namely results for different involvement items in the COVID-19 dataset and an investigation into party identification and general political orientation in the LISS panel.
 
+### Simulation on Detection Methods
+
+This folder contains code to replicate our simulation study (see Appendix B) which assesses the performance of various mode detection methods on simulated distributions. In `modality_simulation1` distributions are simulated, the `modality_simulation2` script defines functions to apply the modality detection methods and in `modality_simulation3` we apply the methods to the simulated distributions and assess their performance. 
 
 ### References
 
